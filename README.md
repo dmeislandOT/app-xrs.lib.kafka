@@ -1,0 +1,1 @@
+app,xrs.lib.kafka

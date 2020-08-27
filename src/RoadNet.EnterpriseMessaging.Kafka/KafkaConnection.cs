@@ -7,6 +7,12 @@ namespace Roadnet.Base.EnterpriseMessaging.Kafka
 {
     public class KafkaConnection : IMessageServiceConnection
     {
+        public KafkaConnection(string bootstrapServers) 
+        {
+            _bootstrapServers = bootstrapServers;
+        }
+
+        #region Unused Code
         public void Connect()
         {
         }
@@ -30,6 +36,9 @@ namespace Roadnet.Base.EnterpriseMessaging.Kafka
             throw new System.NotImplementedException();
         }
 
+        #endregion
+
+        #region Comsumer Methods
         public IMessageServiceConsumer<TKey, TContract> GetTopicConsumer<TKey, TWire, TContract>(
             string subscriberId, 
             string topicName, 
@@ -52,6 +61,8 @@ namespace Roadnet.Base.EnterpriseMessaging.Kafka
                 topicName, 
                 new ProtobufDeserializer<TContract>());
         }
+        
+        #endregion
 
         public IMessageServiceProducer<TValue> GetTopicProducer<TValue>(string topicName)
         {

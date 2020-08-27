@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30330.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Test", "Unit Test", "{8D9D8703-A13B-4BC9-9CE3-DF95684DDAC6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SourceCode", "SourceCode", "{FF8A7B1C-4399-4AEA-85C7-7D4722EFC33F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Base.EnterpriseMessaging", "src\RoadNet.EnterpriseMessaging\Base.EnterpriseMessaging.csproj", "{6EA1013B-4D28-456F-B525-58EF3667CCC4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Base.EnterpriseMessaging.Kafka", "src\RoadNet.EnterpriseMessaging.Kafka\Base.EnterpriseMessaging.Kafka.csproj", "{BD1A1C92-31DC-4889-9433-DC663D63625E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XRS.EnterpriseMessaging", "src\XRS.EnterpriseMessaging\XRS.EnterpriseMessaging.csproj", "{19FB9A44-8DDF-4C18-8108-99F50D8675F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XRS.EnterpriseMessaging.UnitTest", "test\XRS.EnterpriseMessaging.UnitTest\XRS.EnterpriseMessaging.UnitTest.csproj", "{E538AACE-F477-4A1F-9613-094076129E48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EA1013B-4D28-456F-B525-58EF3667CCC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EA1013B-4D28-456F-B525-58EF3667CCC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EA1013B-4D28-456F-B525-58EF3667CCC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EA1013B-4D28-456F-B525-58EF3667CCC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD1A1C92-31DC-4889-9433-DC663D63625E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD1A1C92-31DC-4889-9433-DC663D63625E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD1A1C92-31DC-4889-9433-DC663D63625E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD1A1C92-31DC-4889-9433-DC663D63625E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19FB9A44-8DDF-4C18-8108-99F50D8675F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19FB9A44-8DDF-4C18-8108-99F50D8675F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19FB9A44-8DDF-4C18-8108-99F50D8675F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19FB9A44-8DDF-4C18-8108-99F50D8675F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E538AACE-F477-4A1F-9613-094076129E48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E538AACE-F477-4A1F-9613-094076129E48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E538AACE-F477-4A1F-9613-094076129E48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E538AACE-F477-4A1F-9613-094076129E48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6EA1013B-4D28-456F-B525-58EF3667CCC4} = {FF8A7B1C-4399-4AEA-85C7-7D4722EFC33F}
+		{BD1A1C92-31DC-4889-9433-DC663D63625E} = {FF8A7B1C-4399-4AEA-85C7-7D4722EFC33F}
+		{19FB9A44-8DDF-4C18-8108-99F50D8675F0} = {FF8A7B1C-4399-4AEA-85C7-7D4722EFC33F}
+		{E538AACE-F477-4A1F-9613-094076129E48} = {8D9D8703-A13B-4BC9-9CE3-DF95684DDAC6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FDAC63BE-105D-4FD3-84E2-D235ED0AA2A6}
+	EndGlobalSection
+EndGlobal

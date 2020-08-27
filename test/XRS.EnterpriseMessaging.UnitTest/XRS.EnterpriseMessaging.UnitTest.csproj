@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Confluent.Kafka" Version="1.5.1" />
+    <PackageReference Include="Google.Protobuf" Version="3.13.0" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="System.Memory" Version="4.5.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\RoadNet.EnterpriseMessaging.Kafka\Base.EnterpriseMessaging.Kafka.csproj" />
+    <ProjectReference Include="..\..\src\RoadNet.EnterpriseMessaging\Base.EnterpriseMessaging.csproj" />
+    <ProjectReference Include="..\..\src\XRS.EnterpriseMessaging\XRS.EnterpriseMessaging.csproj" />
+  </ItemGroup>
+
+</Project>

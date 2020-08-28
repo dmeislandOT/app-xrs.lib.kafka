@@ -1,6 +1,6 @@
 ﻿
 using Confluent.Kafka;
-
+using System.Threading;
 using Google.Protobuf;
 
 namespace Roadnet.Base.EnterpriseMessaging.Kafka
@@ -24,18 +24,18 @@ namespace Roadnet.Base.EnterpriseMessaging.Kafka
         public void Publish(TKey key, TValue value)
         {
             _producer
-                .ProduceAsync(
+                .Produce(
                     _topic,
                     new Message<TKey, TValue>
                     {
                         Key = key,
                         Value = value
-                    })
-                .GetAwaiter()
-                .GetResult();
+                    });
+            // Allows the Publisher to Publish....
+            Thread.Sleep(1000);
         }
 
-        internal KafkaTopicProducer(string servers, string topic)
+        public KafkaTopicProducer(string servers, string topic)
         {
             var builder = new ProducerBuilder<TKey, TValue>(new ProducerConfig
             {

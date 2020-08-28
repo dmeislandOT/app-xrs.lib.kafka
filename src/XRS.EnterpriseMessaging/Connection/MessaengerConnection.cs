@@ -1,13 +1,16 @@
-
-using Confluent.Kafka;
+﻿using Confluent.Kafka;
 using Google.Protobuf;
 using System;
+using Roadnet.Base.EnterpriseMessaging.Kafka;
+using Roadnet.Base.EnterpriseMessaging;
+using  XRS.EnterpriseMessaging.Serializers;
 
-namespace Roadnet.Base.EnterpriseMessaging.Kafka
+namespace XRS.EnterpriseMessaging.Connection
 {
-    public class KafkaConnection : IMessageServiceConnection
+    public class MessaengerConnection : IMessageServiceConnection
     {
-        public KafkaConnection(string bootstrapServers) 
+
+        public MessaengerConnection(string bootstrapServers)
         {
             _bootstrapServers = bootstrapServers;
         }
@@ -43,8 +46,8 @@ namespace Roadnet.Base.EnterpriseMessaging.Kafka
         public string ServerUri { get { return _bootstrapServers; } }
 
         public IMessageServiceConsumer<TKey, TContract> GetTopicConsumer<TKey, TWire, TContract>(
-            string subscriberId, 
-            string topicName, 
+            string subscriberId,
+            string topicName,
             IContractDeserializer<TWire, TContract> contractDeserializer)
         {
             return new KafkaContractConsumer<TKey, TWire, TContract>(
@@ -55,24 +58,33 @@ namespace Roadnet.Base.EnterpriseMessaging.Kafka
         }
 
         public IMessageServiceConsumer<TKey, TContract> GetTopicConsumer<TKey, TContract>(
-            string subscriberId, 
+            string subscriberId,
             string topicName)
         {
             return new KafkaContractConsumer<TKey, byte[], TContract>(
-                _bootstrapServers, 
-                subscriberId, 
-                topicName, 
+                _bootstrapServers,
+                subscriberId,
+                topicName,
                 new ProtobufDeserializer<TContract>());
         }
 
         public IMessageServiceConsumer<TKey, TContract> GetTopicConsumer<TKey, TContract>(
         string topicName)
         {
-            return new KafkaContractConsumer<TKey, byte[], TContract>(
+            var type = typeof(TContract);
+            if (type == typeof(string))
+            {
+                var  contractDes = new ContractDeserializerString();
+                var stringconsumer = new KafkaContractConsumer<TKey,string,string>(_bootstrapServers, "0", topicName,contractDes);
+                return stringconsumer as IMessageServiceConsumer<TKey,TContract>;
+            }
+
+            var consumer =  new KafkaContractConsumer<TKey, byte[], TContract>(
                 _bootstrapServers,
                 "0",
                 topicName,
                 new ProtobufDeserializer<TContract>());
+            return consumer;
         }
 
 
@@ -96,7 +108,7 @@ namespace Roadnet.Base.EnterpriseMessaging.Kafka
                     typeof(MessageParser<>).MakeGenericType(typeof(TContract)),
                     (Func<TContract>)(() => Activator.CreateInstance<TContract>()));
             }
-            
+
             public TContract Deserialize(byte[] data)
             {
                 return (TContract)_parser.ParseFrom(data);

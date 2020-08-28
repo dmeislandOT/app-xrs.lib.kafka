@@ -71,11 +71,21 @@ namespace Roadnet.Base.EnterpriseMessaging
             string subscriberId,
             string topicName);
 
+
+        IMessageServiceConsumer<TKey, TContract> GetTopicConsumer<TKey, TContract>(
+        string topicName);
+
+
         /// <summary>
         /// Get a queue consumer for the connection.
         /// </summary>
         /// <param name="queueName">The identifier for the queue to listen on</param>
         /// <returns>A queue identified by the input name</returns>
         IMessageServiceConsumer GetQueueConsumer(string queueName);
+
+        /// <summary>
+        /// Boot Strap Servers used by Connection
+        /// </summary>
+        string ServerUri { get; }
     }
 }

@@ -1,10 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
+ 
 using Roadnet.Base.EnterpriseMessaging;
 
 namespace XRS.EnterpriseMessaging.UnitTest.TestHelpers
 {
-    public class DummyServicConnection : IMessageServiceConnection
+    public class DummyServicConnection : Connection.IMessageServiceConnection
+        
     {
         public bool ThrowExeption { get; set; }
 
@@ -29,6 +30,8 @@ namespace XRS.EnterpriseMessaging.UnitTest.TestHelpers
         {
             get; set;
         }
+
+        public string ServerUri => "localhost:9092";
 
         public void InitProducers<TKey, TValue>()
         {
@@ -102,6 +105,11 @@ namespace XRS.EnterpriseMessaging.UnitTest.TestHelpers
                 return Producer2 as IMessageServiceProducer<TKey,TValue>;
             }
             return new DummyMessageProducer2<TKey,TValue>(this);
+        }
+
+        public IMessageServiceConsumer<TKey, TContract> GetTopicConsumer<TKey, TContract>(string topicName)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-using Roadnet.Base.EnterpriseMessaging;
+using XRS.Base.EnterpriseMessaging;
 
 namespace XRS.EnterpriseMessaging.UnitTest.TestHelpers
 {

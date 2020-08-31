@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace Roadnet.Base.EnterpriseMessaging
+namespace XRS.Base.EnterpriseMessaging
 {
     /// <summary>
     /// Allows for the receiving of messages from a shared enterprise message bus

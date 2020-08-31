@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Roadnet.Base.EnterpriseMessaging
+namespace XRS.Base.EnterpriseMessaging
 {
     /// <summary>
     /// Allows for the sending of messages to a shared enterprise message bus

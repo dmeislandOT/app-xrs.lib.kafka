@@ -1,4 +1,4 @@
-﻿namespace Roadnet.Base.EnterpriseMessaging
+﻿namespace XRS.Base.EnterpriseMessaging
 {
     /// <summary>
     /// Defines a serializer to parse the message bus 

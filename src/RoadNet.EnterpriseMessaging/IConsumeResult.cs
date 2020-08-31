@@ -1,4 +1,4 @@
-﻿namespace Roadnet.Base.EnterpriseMessaging
+﻿namespace XRS.Base.EnterpriseMessaging
 {
     /// <summary>
     /// Defines a Key/Value consumer result

@@ -7,7 +7,7 @@ namespace XRS.EnterpriseMessaging.Connection
     /// A connection to a enterprise messaging system that manages the creation of publishers
     /// and subscribers.
     /// </summary>
-    public interface IMessageServiceConnection : Roadnet.Base.EnterpriseMessaging.IMessageServiceConnection,  IDisposable
+    public interface IMessageServiceConnection : XRS.Base.EnterpriseMessaging.IMessageServiceConnection,  IDisposable
     {
     }
 }

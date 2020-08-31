@@ -1,4 +1,4 @@
-﻿namespace Roadnet.Base.EnterpriseMessaging
+﻿namespace XRS.Base.EnterpriseMessaging
 {
     /// <summary>
     /// The source/destination type of the message service

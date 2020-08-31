@@ -3,7 +3,7 @@ using Confluent.Kafka;
 using Google.Protobuf;
 using System;
 
-namespace Roadnet.Base.EnterpriseMessaging.Kafka
+namespace XRS.Base.EnterpriseMessaging.Kafka
 {
     public class KafkaConnection : IMessageServiceConnection
     {

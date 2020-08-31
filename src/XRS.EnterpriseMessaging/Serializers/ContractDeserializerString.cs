@@ -1,4 +1,4 @@
-﻿using Roadnet.Base.EnterpriseMessaging;
+﻿using XRS.Base.EnterpriseMessaging;
 
 namespace XRS.EnterpriseMessaging.Serializers
 {

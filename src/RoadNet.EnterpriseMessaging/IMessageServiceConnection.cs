@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Roadnet.Base.EnterpriseMessaging
+namespace XRS.Base.EnterpriseMessaging
 {
     /// <summary>
     /// A connection to a enterprise messaging system that manages the creation of publishers

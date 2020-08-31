@@ -3,7 +3,7 @@ using Confluent.Kafka;
 using System.Threading;
 using Google.Protobuf;
 
-namespace Roadnet.Base.EnterpriseMessaging.Kafka
+namespace XRS.Base.EnterpriseMessaging.Kafka
 {
     public class KafkaTopicProducer<TKey, TValue> : IMessageServiceProducer<TKey, TValue>
     {

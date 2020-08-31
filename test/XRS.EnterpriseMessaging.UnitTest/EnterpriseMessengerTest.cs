@@ -1,5 +1,4 @@
-﻿using XRS.EnterpriseMessaging;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using XRS.EnterpriseMessaging.UnitTest.TestHelpers;
 
 namespace XRS.EnterpriseMessaging.UnitTest

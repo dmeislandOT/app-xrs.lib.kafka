@@ -1,8 +1,8 @@
 ﻿using Confluent.Kafka;
 using Google.Protobuf;
 using System;
-using Roadnet.Base.EnterpriseMessaging.Kafka;
-using Roadnet.Base.EnterpriseMessaging;
+using XRS.Base.EnterpriseMessaging.Kafka;
+using XRS.Base.EnterpriseMessaging;
 using  XRS.EnterpriseMessaging.Serializers;
 
 namespace XRS.EnterpriseMessaging.Connection

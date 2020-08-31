@@ -2,7 +2,7 @@
 using System.Threading;
 using Confluent.Kafka;
 
-namespace Roadnet.Base.EnterpriseMessaging.Kafka
+namespace XRS.Base.EnterpriseMessaging.Kafka
 {
     public sealed class KafkaContractConsumer<TKey, TWire, TContract> : IMessageServiceConsumer<TKey, TContract>
     {
